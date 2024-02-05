@@ -1,18 +1,25 @@
 var tabLinks = document.getElementsByClassName("tab-links");
 var tabContents = document.getElementsByClassName("tab-contents");
 
-
-
-
 function openTab(tabName) {
-    for (let tabLink of tabLinks) {
-        tabLink.classList.remove("active-link");
-    }
+  for (let tabLink of tabLinks) {
+    tabLink.classList.remove("active-link");
+  }
 
-    for(let tabContent of tabContents) {
-        tabContent.classList.remove("active-tab");
-    }
-    
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabName).classList.add("active-tab");
+  for (let tabContent of tabContents) {
+    tabContent.classList.remove("active-tab");
+  }
+
+  event.currentTarget.classList.add("active-link");
+  document.getElementById(tabName).classList.add("active-tab");
+}
+
+var sideMenu = document.getElementById("sidemenu");
+
+function closeMenu() {
+    sideMenu.style.right = "-200px";
+}
+
+function openMenu() {
+  sideMenu.style.right = "0";
 }
