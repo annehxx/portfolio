@@ -15,6 +15,10 @@ header {
   height: 100vh;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .logo {
   font-size: 4rem;
 }
