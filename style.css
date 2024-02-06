@@ -158,6 +158,11 @@ nav ul li a:hover::after {
   font-size: 0.9rem;
 }
 
+.tab-contents ul li img {
+  width: 25px;
+  height: 25px;
+}
+
 .tab-contents {
   display: none;
 }

@@ -72,11 +72,23 @@
             <div class="tab-contents active-tab" id="skills">
               <ul>
                 <li>
-                  <span>Frontend Developer</span><br />Developing Web
-                  applications
+                  <span>Frontend Developer</span><br /><br />
+                  <i class="fab fa-html5"></i> HTML5 <br />
+                  <i class="fab fa-css3-alt"></i> CSS3 <br />
+                  <i class="fab fa-js"></i> JavaScript <br />
+                  <i class="fab fa-angular"></i> Angular <br />
+                  <img src="/images/typescript.png" alt="typescript logo" />
+                  TypeScript <br />
                 </li>
-                <li><span>3D Modelling</span><br />Modelling 3D</li>
-                <li><span>UI / UX</span><br />Designing Web/App interfaces</li>
+                <li>
+                  <span>3D Modelling</span><br /><br />
+                  <img src="/images/blender.png" alt="blender logo" /> Blender
+                  <img src="/images/spline.png" alt="spline logo" /> Spline
+                </li>
+                <li>
+                  <span>UI / UX</span><br /><br />
+                  <img src="/images/figma.png" alt="figma icon" /> Figma
+                </li>
               </ul>
             </div>
 
@@ -124,7 +136,6 @@
               accusamus a, minima, nemo, culpa inventore dicta labore velit
               laborum sapiente tenetur ab.
             </p>
-            <a href="#">Learn more</a>
           </div>
 
           <div class="service-item">
@@ -136,7 +147,6 @@
               accusamus a, minima, nemo, culpa inventore dicta labore velit
               laborum sapiente tenetur ab.
             </p>
-            <a href="#">Learn more</a>
           </div>
 
           <div class="service-item">
@@ -148,7 +158,6 @@
               accusamus a, minima, nemo, culpa inventore dicta labore velit
               laborum sapiente tenetur ab.
             </p>
-            <a href="#">Learn more</a>
           </div>
         </div>
       </div>
@@ -238,7 +247,12 @@
                 placeholder="Your Email"
                 required
               />
-              <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+                required
+              ></textarea>
               <button type="submit" class="btn btn2">Submit</button>
             </form>
           </div>
@@ -259,17 +273,5 @@
       src="https://kit.fontawesome.com/0ae3828fd1.js"
       crossorigin="anonymous"
     ></script>
-
-    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbxBK1ETokBqjBjK019uoaDNxz-Bk98vr9BkZ8xba6p2Y0hxubcekveaG58W_IzwwA6C/exec'
-      const form = document.forms['submit-to-google-sheet']
-    
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => console.log('Success!', response))
-          .catch(error => console.error('Error!', error.message))
-      })
-    </script>
   </body>
 </html>
