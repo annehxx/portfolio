@@ -96,7 +96,7 @@
                   Computer Science (B. Sc.)
                 </li>
                 <li>
-                  <span>2016 - 2016</span><br />BASF Schwarzheide GmbH,
+                  <span>2016 - 2019</span><br />BASF Schwarzheide GmbH,
                   Apprentice Chemical Technican Worker
                 </li>
                 <li>
@@ -230,11 +230,11 @@
             <a href="images/my-cv.pdf" download class="btn">Download CV</a>
           </div>
           <div class="contact-right">
-            <form>
+            <form name="submit-to-google-sheet">
               <input type="text" name="Name" placeholder="Your Name" required />
               <input
                 type="email"
-                name="email"
+                name="Email"
                 placeholder="Your Email"
                 required
               />
@@ -259,5 +259,17 @@
       src="https://kit.fontawesome.com/0ae3828fd1.js"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxBK1ETokBqjBjK019uoaDNxz-Bk98vr9BkZ8xba6p2Y0hxubcekveaG58W_IzwwA6C/exec'
+      const form = document.forms['submit-to-google-sheet']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
   </body>
 </html>

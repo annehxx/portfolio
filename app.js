@@ -23,3 +23,5 @@ function closeMenu() {
 function openMenu() {
   sideMenu.style.right = "0";
 }
+
+
