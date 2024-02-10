@@ -236,6 +236,7 @@ nav ul li a:hover::after {
   border-radius: 20px;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .work img {
