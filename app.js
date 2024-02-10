@@ -32,17 +32,12 @@ const form = document.forms["submit-to-google-sheet"];
 
 const successMessage = document.getElementById("success-message");
 
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
-
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
   successMessage.style.display = "block";
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    fetch(scriptURL, { method: "POST", body: new FormData(form) })
-      .then((response) => console.log("Success!", response))
-      .catch((error) => console.error("Error!", error.message));
-  });
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => console.log("Success!", response))
+    .catch((error) => console.error("Error!", error.message));
 
   document.getElementById("name").value = "";
   document.getElementById("email").value = "";
